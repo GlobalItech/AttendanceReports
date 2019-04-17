@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+   
+   
+        <record id="employee_field_form12" model="ir.ui.view">
+            <field name="name">hr.employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//form/sheet/notebook/page/group/group/field[@name='work_phone']" position="after">
+                    <field name="employe_code"/>
+                
+                 </xpath>
+            </field>            
+    
+        </record>
+        
+        
+        
+    
+     <record id="open_order1" model="ir.ui.view">
+            <field name="name">Attendance Fields Form</field>
+            <field name="model">policy.form</field>
+            <field name="arch" type="xml">
+                <form string="Attendance Fields Form">
+                  <sheet>
+                    <group col="4">
+                        
+                            <field name="time_mint" widget="float_time"/>
+                            <field name="short_leave_policy"/>
+                            <field name="short_leaves" widget="float_time"/>
+                            <field name="half_leaves" widget="float_time"/>
+                            <field name="num_of_leaves_per_month"/>
+                            <field name="leavedaycut" widget="float_time"/>
+                     
+                      
+                      
+                    </group>
+                 
+                    
+                    </sheet>
+                </form>
+            </field>
+            </record>
+    
+    
+    
+    
+    
+    
+    
+    
+        
+        <record id="open_attendence_tree" model="ir.ui.view">
+            <field name="name">Attendance Tree</field>
+            <field name="model">policy.form</field>
+            <field name="arch" type="xml">
+                <tree string="Attendance Tree">
+                            <field name="time_mint"/>
+                            <field name="short_leave_policy"/>
+                            <field name="short_leaves"/>
+                            <field name="half_leaves"/>
+                            <field name="num_of_leaves_per_month"/>
+                            <field name="leavedaycut"/>
+                 
+                    
+                </tree>
+            </field>
+        </record>
+        <record id="open_attendence_form" model="ir.actions.act_window">
+            <field name="name">Policy Fields Form </field>
+            <field name="res_model">policy.form</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form,tree</field>
+            <field name="view_id" ref="open_attendence_tree"/>
+        </record>
+        <menuitem id="attendance_ids" 
+            name="Policy Configuration" 
+            parent="hr_attendance.menu_hr_attendance_root"
+            action="open_attendence_form"/> 
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+</data>
+</odoo>
