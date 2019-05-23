@@ -1,9 +1,9 @@
 
 {
-    'name': 'Export Attendance in Excel',
+    'name': 'HR (Daily/Monthly) Reports in Excel',
     'summary': "Print Attendance Report in Excel from Attendances",
-    'author':  'ItechResources',
-    'company': 'ItechResources',
+    'author':  'itech resources',
+    'company': 'itech resources',
     'depends': [
                 'base',
                 'hr',
