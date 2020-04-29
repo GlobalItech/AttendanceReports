@@ -4,7 +4,7 @@
     'summary': "Print Attendance Report in Excel from Attendances",
     'author':  'itech resources',
     'company': 'itech resources',
-    'license': 'LGPL-3',
+    'license': 'AGPL-3',
     'depends': [
                 'base',
                 'hr',
