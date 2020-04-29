@@ -4,6 +4,7 @@
     'summary': "Print Attendance Report in Excel from Attendances",
     'author':  'itech resources',
     'company': 'itech resources',
+    'license': 'LGPL-3',
     'depends': [
                 'base',
                 'hr',
@@ -15,6 +16,7 @@
             'views/customizations.xml',
           
             ],
+    'images': ['static/description/banner.gif'], 
     'installable': True,
     'auto_install': False,
     'price':'80.0',
